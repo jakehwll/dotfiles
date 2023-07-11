@@ -10,6 +10,7 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
 fi
 cd "$CURRENT_DIR"
 
-cat ./.zshrc >> ~/.zshrc
+mv ~/.zshrc ~/.zshrc.old
+cp ./.zshrc ~/.zshrc
 
 echo "👌 Carry on with git setup!"
