@@ -16,7 +16,7 @@ plugins=(git)
 
 # Auto suggestions and Syntax highlighting
 source ${ZSH_PLUGINS_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ${ZSH_PLUGINS_DIR}/zsh-syntax-highlighting.zsh/zsh-syntax-highlighting.zsh
+source ${ZSH_PLUGINS_DIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Check if `direnv` is in use and add it's hook.
 if command -v direnv &> /dev/null; then
