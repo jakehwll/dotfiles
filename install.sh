@@ -24,9 +24,9 @@ if [ ! -x "$(command -v zsh)" ]; then
 fi
 
 # Get the shell and change it to zsh if it isn't already
-if [ "$SHELL" != "${which zsh}" ]; then
-  echo "😠 Changing shell from \`$SHELL\` to ${which zsh}"
-  chsh -s "${which zsh}"
+if [ "$SHELL" != "$(which zsh)" ]; then
+  echo "😠 Changing shell from \`$SHELL\` to $(which zsh)"
+  chsh -s "$(which zsh)"
 fi
 
 echo "🎉 We're officially customised!"
