@@ -3,7 +3,7 @@
 ##########################################
 
 # Path to oh-my-zsh configuration.
-ZSH=~/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Name of the theme to load.
 ZSH_THEME="agnoster"
