@@ -24,7 +24,7 @@ if [ ! -x "$(command -v zsh)" ]; then
 fi
 
 # Check if ohmyzsh is installed and install it if its not
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
+if [ ! -d "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]; then
   echo "😠 oh-my-zsh is not installed"
   echo "👀 Installing oh-my-zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -33,7 +33,7 @@ fi
 # Get the shell and change it to zsh if it isn't already
 if [ "$SHELL" != "$(which zsh)" ]; then
   echo "😠 Changing shell from \`$SHELL\` to $(which zsh)"
-  chsh -s "$(which zsh)"
+  sudo chsh -s "$(which zsh)"
 fi
 
 echo "🎉 We're officially customised!"
