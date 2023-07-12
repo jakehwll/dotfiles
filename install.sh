@@ -3,11 +3,6 @@
 CURRENT_DIR=`pwd`
 ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
 
-# Backup our zsh config
-echo "👀 Backing up zsh config"
-mv ~/.zshrc ~/.zshrc.old
-cp ./.zshrc ~/.zshrc
-
 # Check if zsh is installed and change it to zsh if its not already
 if [ ! -x "$(command -v zsh)" ]; then
   echo "😠 `zsh` is not installed"
@@ -29,6 +24,9 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting
 fi
 cd "$CURRENT_DIR"
+
+mv $HOME/.zshrc $HOME/.zshrc.pre-dotfiles
+cp ./.zshrc $HOME/.zshrc
 
 # Get the shell and change it to zsh if it isn't already
 if [ "$SHELL" != "$(which zsh)" ]; then
