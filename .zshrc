@@ -1,6 +1,6 @@
 #########################################
-# Jake Howell's ZSH configuration 
-##########################################
+# ## Jake Howell's ZSH configuration ## #
+#########################################
 
 # Path to oh-my-zsh configuration.
 export ZSH=~/.oh-my-zsh
