@@ -1,6 +1,6 @@
-#########################################
-# ## Jake Howell's ZSH configuration ## #
-#########################################
+# ===================================== #
+# == Jake Howell's ZSH configuration == #
+# ===================================== #
 
 # Path to oh-my-zsh configuration.
 export ZSH=~/.oh-my-zsh
@@ -10,6 +10,9 @@ ZSH_THEME="agnoster"
 
 # Name of the plugin(s) directory.
 ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
+
+# Command completing indication.
+COMPLETION_WAITING_DOTS="true"
 
 # Plugins shorthand
 plugins=(git)
@@ -30,3 +33,15 @@ fi
 if command -v direnv &> /dev/null; then
   eval "$(direnv hook zsh)"
 fi
+
+# ===================================== #
+# Jake Howell's Magic
+# ===================================== #
+
+export EDITOR='code --wait'
+
+alias g="git"
+alias b="bun"
+alias y="yarn"
+alias p="pnpm"
+alias py="python3"
