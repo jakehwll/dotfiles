@@ -25,4 +25,8 @@ if [ "$SHELL" != "$(which zsh)" ]; then
   sudo chsh -s "$(which zsh)"
 fi
 
+# Git Configuration
+git config --global user.name "Jake Howell"
+git config --global user.email jake@hwll.me
+
 echo "🎉 We're officially customised!"
