@@ -16,7 +16,7 @@ fi
 {
   echo ""
   echo "$START_MARK"
-  cat "$DOTFILES_DIR/zsh/managed.zsh"
+  cat "$DOTFILES_DIR/zsh/history.zsh"
   echo "$END_MARK"
 } >> "$ZSHRC"
 
