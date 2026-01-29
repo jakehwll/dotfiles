@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # nano
-brew install nano
+command -v nano &>/dev/null || brew install nano
 
 # graphite
-brew install withgraphite/tap/graphite
+command -v gt &>/dev/null || brew install withgraphite/tap/graphite
