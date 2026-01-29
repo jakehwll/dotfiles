@@ -2,10 +2,11 @@
 set -euo pipefail
 
 ORIG_DIR="$(pwd)"
-BREW_BIN="$HOME/.linuxbrew/bin/brew"
 
-if [ -x "$BREW_BIN" ]; then
+if command -v brew &>/dev/null; then
   echo "Linuxbrew already installed"
+elif [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  echo "Linuxbrew already installed (not in PATH)"
 else
   echo "Installing Linuxbrew..."
   NONINTERACTIVE=1 /bin/bash -c \
