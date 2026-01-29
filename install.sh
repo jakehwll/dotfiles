@@ -1,8 +1,23 @@
-#!/bin/bash
-
-# Exit on error
+#!/usr/bin/env bash
 set -e
 
-CUR_DIR="$(pwd)"
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ZSHRC="$HOME/.zshrc"
 
-echo "Current directory: $CUR_DIR"
+START_MARK="# ### DOTFILES START ###"
+END_MARK="# ### DOTFILES END ###"
+
+# Remove old block if it exists
+if grep -q "$START_MARK" "$ZSHRC" 2>/dev/null; then
+  sed -i.bak "/$START_MARK/,/$END_MARK/d" "$ZSHRC"
+fi
+
+# Append fresh block
+{
+  echo ""
+  echo "$START_MARK"
+  cat "$DOTFILES_DIR/zsh/managed.zsh"
+  echo "$END_MARK"
+} >> "$ZSHRC"
+
+echo "✅ .zshrc updated"
