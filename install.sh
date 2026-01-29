@@ -16,7 +16,11 @@ fi
 {
   echo ""
   echo "$START_MARK"
+  
+  # zsh commands
+  cat "$DOTFILES_DIR/zsh/editor.zsh"
   cat "$DOTFILES_DIR/zsh/history.zsh"
+
   echo "$END_MARK"
 } >> "$ZSHRC"
 
