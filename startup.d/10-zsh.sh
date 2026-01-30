@@ -19,6 +19,7 @@ fi
   cat "$DOTFILES_DIR/zsh/editor.zsh"
   cat "$DOTFILES_DIR/zsh/history.zsh"
   cat "$DOTFILES_DIR/zsh/homebrew.zsh"
+  cat "$DOTFILES_DIR/zsh/nuke.zsh"
   echo "$END_MARK"
 } >> "$ZSHRC"
 
